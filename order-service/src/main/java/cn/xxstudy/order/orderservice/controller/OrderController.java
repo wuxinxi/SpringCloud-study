@@ -1,10 +1,10 @@
 package cn.xxstudy.order.orderservice.controller;
 
+import cn.xxstudy.order.orderservice.clients.UserClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
 
 
 /**
@@ -15,13 +15,16 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class OrderController {
 
+//    @Autowired
+//    private RestTemplate restTemplate;
+
     @Autowired
-    private RestTemplate restTemplate;
+    private UserClient client;
 
     @GetMapping("/getOrder/{id}")
     public String getOrder(@PathVariable("id") int orderId) {
-        String url = "http://userservice/getUser/" + orderId;
-        String response = restTemplate.getForObject(url, String.class);
+//        String url = "http://userservice/getUser/" + orderId;
+        String response = client.getUser(orderId);
         return String.format("orderId=%d,response=%s", orderId, response);
     }
 
