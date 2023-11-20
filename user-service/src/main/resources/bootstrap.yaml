@@ -6,7 +6,5 @@ spring:
   cloud:
     nacos:
       server-addr: localhost:8848 #nacos 地址
-      discovery:
-        cluster-name: SH #集群名称
       config:
         file-extension: yaml #文件扩展后缀

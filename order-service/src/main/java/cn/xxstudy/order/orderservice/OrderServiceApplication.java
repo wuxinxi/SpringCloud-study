@@ -1,14 +1,13 @@
 package cn.xxstudy.order.orderservice;
 
+import cn.xxstudy.order.orderservice.config.FeignClientConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.openfeign.EnableFeignClients;
-import org.springframework.context.annotation.Bean;
-import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-@EnableFeignClients
+//@EnableFeignClients(defaultConfiguration = FeignClientConfiguration.class )
+@EnableFeignClients(defaultConfiguration = FeignClientConfiguration.class )
 public class OrderServiceApplication {
 
     public static void main(String[] args) {

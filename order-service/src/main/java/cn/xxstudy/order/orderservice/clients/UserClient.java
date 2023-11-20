@@ -1,5 +1,6 @@
 package cn.xxstudy.order.orderservice.clients;
 
+import cn.xxstudy.order.orderservice.config.FeignClientConfiguration;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

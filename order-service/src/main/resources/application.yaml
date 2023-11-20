@@ -36,3 +36,15 @@ mybatis-plus:
       table-prefix: tb_
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+logging:
+  level:
+    cn.xxstudy: debug
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
+
+feign:
+  client:
+    config:
+      default:
+        loggerLevel: FULL
