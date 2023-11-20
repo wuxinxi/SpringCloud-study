@@ -14,6 +14,8 @@ spring:
       server-addr: localhost:8848 #nacos服务地址
       discovery:
         cluster-name: SH
+        ephemeral: false # 非临时实例
+        #namespace: xxxxxxxxxx
 
 #指定那个服务需要配置负载均衡的规则
 userservice:
