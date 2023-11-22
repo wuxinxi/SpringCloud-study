@@ -44,6 +44,10 @@ logging:
     dateformat: MM-dd HH:mm:ss:SSS
 
 feign:
+  httpclient:
+    enabled: true
+    max-connections: 300 #最大连接数
+    max-connections-per-route: 100 #每个路径最大连接数 ，这些都需要根据服务器压测结果进行调整
   client:
     config:
       default:
