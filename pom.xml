@@ -20,6 +20,7 @@
     <modules>
         <module>order-service</module>
         <module>user-service</module>
+        <module>getway</module>
     </modules>
 
     <properties>
